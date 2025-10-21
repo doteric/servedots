@@ -6,6 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC"
+  "homepage": "https://github.com/doteric/servedots",
+  "repository": {
+    "url": "https://github.com/doteric/servedots"
+  }
 }
