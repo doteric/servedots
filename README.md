@@ -20,3 +20,8 @@ Dots:
 ...
 
 Proper readme to be filled
+
+# TODO (repo wide pieces):
+
+- OpenApi could be a separate package, so that it does not get involved into actual servers?
+- Add eslint and prettier

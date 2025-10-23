@@ -1,13 +1,37 @@
 {
+  "type": "module",
   "name": "servedots",
   "version": "0.0.0-dev",
   "description": "Serve Dots? ALPHA!",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "test": "vitest run",
+    "example:simple": "tsx watch src/examples/1_simple/index.ts",
+    "example:lambdas": "tsx watch src/examples/2_lambda_per_endpoint/index.ts",
+    "example:plain-nodejs": "tsx src/examples/plain-nodejs-adapter/index.ts"
   },
   "homepage": "https://github.com/doteric/servedots",
   "repository": {
     "url": "https://github.com/doteric/servedots"
+  },
+  "dependencies": {
+    "ts-json-schema-generator": "^2.4.0",
+    "ts-morph": "^27.0.2",
+    "zod": "^3.22.4",
+    "zod-to-json-schema": "^3.24.6"
+  },
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.156",
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.10.0",
+    "tsx": "^4.20.6",
+    "typescript": "^5.3.2",
+    "vitest": "^4.0.3"
+  },
+  "peerDependencies": {
+    "express": "^4.18.0"
   }
 }
